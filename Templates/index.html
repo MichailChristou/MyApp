@@ -1,19 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="..\static\styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction App</title>
 </head>
 <body>
-    <h1>Make a Prediction</h1>
-    <form action="/predict" method="post">
-        {% for feature, range in numeric_columns_ranges.items() %}
-            <label for="{{ feature }}">{{ feature }}</label>
-            <input type="number" name="{{ feature }}" id="{{ feature }}" min="{{ range[0] }}" max="{{ range[1] }}" required>
-            <br><br>
-        {% endfor %}
-        <button type="submit">Predict</button>
-    </form>
+
+
+
+    <div id="navbar" class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#help" class="split">Help</a>
+        <a href="#about" class="split">About us</a>
+        <a href="#tips" class="split">Tips</a>
+    </div>
+
+
+    <div>
+        <h1>Welcome to Our Web App</h1>
+        <p>Discover amazing features.</p>
+        <button type="button">Get Started</button>
+    </div>
+
+    <!--
+        <div className="max-w-4xl mx-auto">
+          <img src="/placeholder.svg?height=400&width=800" alt="Hero Image" className="w-full rounded-lg shadow-lg" />
+        </div>
+    -->
+
+    <!--
+    <section id="section1" className="container mx-auto px-4 py-20">
+        <div className="max-w-2xl mx-auto text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">Welcome to Our Web App</h1>
+          <p className="text-xl mb-8">Discover amazing features and boost your productivity.</p>
+          <Button onClick={handleScrollToDetails} className={`${isDarkMode ? 'bg-green-500 hover:bg-green-600' : 'bg-green-600 hover:bg-green-700'} text-white`}>
+            Get Started
+            <ChevronDownIcon className="ml-2 h-4 w-4" />
+          </Button>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <img src="/placeholder.svg?height=400&width=800" alt="Hero Image" className="w-full rounded-lg shadow-lg" />
+        </div>
+
+    </section>
+    -->
+
+    <div>
+        <h1>Make a Prediction</h1>
+        <form action="/predict" method="post">
+            {% for feature, range in numeric_columns_ranges.items() %}
+                <label for="{{ feature }}">{{ feature }}</label>
+                <input type="number" name="{{ feature }}" id="{{ feature }}" min="{{ range[0] }}" max="{{ range[1] }}" required>
+                <br><br>
+            {% endfor %}
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
 </body>
 </html>

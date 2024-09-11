@@ -9,16 +9,14 @@ app = Flask(__name__)
 def index():
     numeric_columns_ranges = {
         'CURRENT_ENERGY_RATING': (1, 10),
-        'NUMBER_HEATED_ROOMS': (1, 10),
-        'NUMBER_HABITABLE_ROOMS': (1, 10),
-        'WINDOWS_ENERGY_EFF': (1, 5),
-        'ENVIRONMENT_IMPACT_CURRENT': (1, 100),
         'CURRENT_ENERGY_EFFICIENCY': (1, 100),
         'ENERGY_CONSUMPTION_CURRENT': (0, 1000),
-        'CO2_EMISSIONS_CURRENT': (0, 1000),
-        'LIGHTING_COST_CURRENT': (0, 1000),
         'HEATING_COST_CURRENT': (0, 1000),
-        'TOTAL_FLOOR_AREA': (0, 1000)
+        'TOTAL_FLOOR_AREA': (0, 1000),
+        'NUMBER_HABITABLE_ROOMS': (1, 10),
+        'NUMBER_HEATED_ROOMS': (1, 10),
+        'WINDOWS_ENERGY_EFF': (1, 5),
+        'MAINHEATC_ENERGY_EFF': (1, 5),
     }
 
     return render_template('index.html', numeric_columns_ranges=numeric_columns_ranges)
@@ -40,4 +38,3 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
