@@ -13,33 +13,34 @@ class PredictionModel:
 
         if retrain or not os.path.exists(model_path):
             # Load and preprocess the dataset
-            file_path_r1 = r'E:\Gorillino\Unipi\_Πτυχιακη\Dataset\DatasetOneFile\mergedv4.csv'
-            data = pd.read_csv(file_path_r1, nrows=10000)
+            file_path_r1 = r'G:\_Πτυχιακη\Dataset\DatasetOneFile\mergedv4.csv'
+            data = pd.read_csv(file_path_r1, nrows=100)
 
             for i in range(2, 9):
                 data = data[data.IMPROVEMENT_ITEM1 != i]
 
             # Drop unnecessary columns
             columns_to_drop = [
-                'POTENTIAL_ENERGY_RATING', 'POTENTIAL_ENERGY_EFFICIENCY', 'ENVIRONMENT_IMPACT_POTENTIAL',
-                'ENERGY_CONSUMPTION_POTENTIAL', 'CO2_EMISS_CURR_PER_FLOOR_AREA', 'CO2_EMISSIONS_POTENTIAL',
-                'LIGHTING_COST_POTENTIAL', 'HEATING_COST_POTENTIAL', 'HOT_WATER_COST_POTENTIAL',
-                'HOT_WATER_COST_CURRENT', 'WINDOWS_ENV_EFF', 'WALLS_ENERGY_EFF', 'WALLS_ENV_EFF',
-                'ROOF_ENERGY_EFF', 'ROOF_ENV_EFF', 'MAINHEATC_ENERGY_EFF', 'MAINHEATC_ENV_EFF',
+                 'POTENTIAL_ENERGY_EFFICIENCY', 'ENVIRONMENT_IMPACT_POTENTIAL',
+                'ENERGY_CONSUMPTION_POTENTIAL', 'CO2_EMISS_CURR_PER_FLOOR_AREA','ENVIRONMENT_IMPACT_CURRENT','ENVIRONMENT_IMPACT_POTENTIAL', 'CO2_EMISSIONS_POTENTIAL', 'CO2_EMISSIONS_CURRENT',
+                'LIGHTING_COST_POTENTIAL', 'HEATING_COST_POTENTIAL', 'HOT_WATER_COST_POTENTIAL','LIGHTING_COST_CURRENT',
+                'HOT_WATER_COST_CURRENT', 'WALLS_ENERGY_EFF', 'WALLS_ENV_EFF',
+                'ROOF_ENERGY_EFF', 'ROOF_ENV_EFF',  'MAINHEATC_ENV_EFF',
                 'LIGHTING_ENERGY_EFF', 'LIGHTING_ENV_EFF', 'IMPROVEMENT_ITEM2', 'IMPROVEMENT_ITEM3',
-                'IMPROVEMENT_ITEM1', 'IMPROVEMENT_ID2', 'IMPROVEMENT_ID3','LMK_KEY'
+                'IMPROVEMENT_ITEM1', 'IMPROVEMENT_ID2', 'IMPROVEMENT_ID3','WINDOWS_ENV_EFF','POTENTIAL_ENERGY_RATING','LMK_KEY'
             ]
             data.drop(columns=columns_to_drop, inplace=True)
 
             # Save the preprocessed data for potential reuse
-            new_file_path = r'E:\Gorillino\Unipi\_Πτυχιακη\Dataset\DatasetOneFile\MyAppDF.csv'
+            new_file_path = r'G:\_Πτυχιακη\Dataset\DatasetOneFile\MyAppDF.csv'
             data.to_csv(new_file_path, index=False)
 
             # Define the target and feature columns
             drop_columns = ['IMPROVEMENT_ID1']  # List all target column names here
             target_columns = ['IMPROVEMENT_ID1']
 
-            # Save the feature columns for future reference
+
+             # Save the feature columns for future reference
             self.columns = data.drop(columns=drop_columns).columns
             self.default_values = {
                 'LMK_KEY': 'default_value'
@@ -70,7 +71,7 @@ class PredictionModel:
             print("Model loaded from disk.")
 
             # Load the dataset to get the column names, but only need a few rows
-            file_path_r1 = r'E:\Gorillino\Unipi\_Πτυχιακη\Dataset\DatasetOneFile\mergedv4.csv'
+            file_path_r1 = r'G:\_Πτυχιακη\Dataset\DatasetOneFile\mergedv4.csv'
             data = pd.read_csv(file_path_r1, nrows=10)
             drop_columns = ['IMPROVEMENT_ID1']
             self.columns = data.drop(columns=drop_columns).columns
