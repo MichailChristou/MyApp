@@ -19,6 +19,7 @@ def index():
         'MAINHEATC_ENERGY_EFF': (1, 5),
     }
 
+
     return render_template('index.html', numeric_columns_ranges=numeric_columns_ranges)
 
 
