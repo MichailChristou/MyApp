@@ -9,10 +9,6 @@
     background-color: #f2f2f2;
   }
 
-  #section1{
-    margin-inline: auto;
-  }
-
   .container {
     width: 100%;
     max-width: 1200px;
@@ -56,42 +52,6 @@
     color: white;
   }
 
-  .bg-gray-900 {
-    background-color: #1a202c;
-  }
-
-  .bg-gray-800 {
-    background-color: #2d3748;
-  }
-
-  .text-white {
-    color: #fff;
-  }
-
-  .text-green-400 {
-    color: #48bb78;
-  }
-
-  .min-h-screen {
-    min-height: 100vh;
-  }
-
-  .sticky {
-    position: sticky;
-  }
-
-  .top-0 {
-    top: 0;
-  }
-
-  .z-50 {
-    z-index: 50;
-  }
-
-  .shadow-md {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -105,31 +65,6 @@
 
   a:hover {
     color: #48bb78;
-  }
-
-  .flex {
-    display: flex;
-  }
-
-  .flex-1 {
-    flex: 1;
-  }
-
-  .pr-8 {
-    padding-right: 2rem;
-  }
-
-  .text-4xl {
-    font-size: 2.25rem;
-  }
-
-  .text-xl {
-    font-size: 1.25rem;
-  }
-
-  .mb-4, .mb-8 {
-    margin-bottom: 1rem;
-    margin-bottom: 2rem;
   }
 
   .btn {
@@ -184,3 +119,46 @@
     outline: none;
     background-color: #4a5568;
   }
+
+  .centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the button */
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
