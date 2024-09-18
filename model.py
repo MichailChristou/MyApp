@@ -14,7 +14,7 @@ class PredictionModel:
         if retrain or not os.path.exists(model_path):
             # Load and preprocess the dataset
             file_path_r1 = r'G:\_Πτυχιακη\Dataset\DatasetOneFile\mergedv4.csv'
-            data = pd.read_csv(file_path_r1, nrows=100)
+            data = pd.read_csv(file_path_r1, nrows=10)
 
             for i in range(2, 9):
                 data = data[data.IMPROVEMENT_ITEM1 != i]
