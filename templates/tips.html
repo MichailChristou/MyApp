@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Efficiency Tips</title>
+</head>
+<body>
+
+    <nav class="topnav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('help') }}">Help</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+        <a href="{{ url_for('tips') }}" class="active">Tips</a>
+    </nav>
+
+    <div class="content-box">
+        <h1>Energy Efficiency Tips</h1>
+
+        <div class="tips-container">
+            <div class="tip-item">
+                <h2>Tip 1: Upgrade Your Insulation</h2>
+                <p>Proper insulation in your home can drastically reduce the amount of energy needed to maintain a comfortable temperature. Consider insulating your attic, walls, and floors to prevent heat loss in the winter and keep cool in the summer.</p>
+            </div>
+
+            <div class="tip-item">
+                <h2>Tip 2: Switch to LED Lighting</h2>
+                <p>LED bulbs use up to 85% less electricity than traditional incandescent lighting and can last up to 25 times longer. Switch to LED lights to save on energy costs while enjoying better illumination.</p>
+            </div>
+
+            <div class="tip-item">
+                <h2>Tip 3: Seal Gaps and Cracks</h2>
+                <p>Gaps and cracks in windows, doors, and walls can let in drafts, causing your heating or cooling system to work harder. Seal any air leaks to improve your home's energy efficiency.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Energy Efficiency App. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

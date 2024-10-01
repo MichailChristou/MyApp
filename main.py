@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from model import prediction_model  # Import the PredictionModel instance
+import gunicorn
 
 app = Flask(__name__)
 
@@ -35,6 +36,21 @@ def predict():
     prediction = prediction_model.predict(user_input)
 
     return render_template('result.html', prediction=prediction)
+
+# Help page
+@app.route('/help')
+def help():
+    return render_template('help.html')
+
+# About Us page
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+# Tips page
+@app.route('/tips')
+def tips():
+    return render_template('tips.html')
 
 
 if __name__ == "__main__":

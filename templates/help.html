@@ -1,0 +1,42 @@
+<!-- help.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="..\static\styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Suggestions</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="topnav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('help') }}" class="active">Help</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+        <a href="{{ url_for('tips') }}">Tips</a>
+    </nav>
+
+
+    <!-- Help Section -->
+    <section class="help-form">
+        <h1>How Can We Help?</h1>
+        <p>Do you have any suggestions or need assistance? Let us know!</p>
+
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <div class="input-container">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input-container">
+                <label for="suggestion">Suggestion/Help:</label>
+                <textarea name="suggestion" id="suggestion" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send</button>
+        </form>
+    </section>
+</body>
+</html>

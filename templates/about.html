@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+</head>
+<body>
+
+    <nav class="topnav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('help') }}">Help</a>
+        <a href="{{ url_for('about') }}" class="active">About Us</a>
+        <a href="{{ url_for('tips') }}">Tips</a>
+    </nav>
+
+    <div class="content-box">
+        <h1>About Us</h1>
+        <p>
+            Welcome to our Energy Efficiency Prediction Web App! Our mission is to help you optimize your home's energy consumption using cutting-edge machine learning techniques.
+            By analyzing building data and energy performance, our app provides personalized recommendations to improve your home's energy rating.
+        </p>
+        <p>
+            Our team consists of data scientists and software engineers passionate about sustainable living and environmental impact reduction. We strive to make energy efficiency accessible and easy to understand for everyone.
+        </p>
+        <p>
+            We believe that small changes can lead to significant savings — both for your wallet and for the planet. Start using our app today and make your home more energy efficient!
+        </p>
+    </div>
+
+    <footer>
+        © 2024 Energy Efficiency App. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
