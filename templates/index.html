@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="..\static\styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Efficiency Predictor</title>
@@ -9,17 +9,24 @@
 <body>
     <!-- Navbar -->
     <nav class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="">Help</a>
-        <a href="">About Us</a>
-        <a href="">Tips</a>
+        <a href="{{ url_for('index') }}" class="active">Home</a>
+        <a href="{{ url_for('help') }}">Help</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+        <a href="{{ url_for('tips') }}">Tips</a>
     </nav>
 
-    <!-- Welcome Section -->
-    <section class="hero">
-        <h1>Improve Your Home's Energy Efficiency</h1>
-        <p>Use our tool to predict and enhance your energy efficiency rating.</p>
-    </section>
+    <div class="content-box">
+        <h1>Welcome to Our Energy Efficiency Prediction Web App</h1>
+        <p>
+            Our web app helps you assess and improve the energy efficiency of your home using a powerful machine learning model. By providing a few key details about your building, you can receive tailored recommendations to make your home more energy efficient.
+        </p>
+        <p>
+            Our app analyzes building data and energy performance metrics to provide personalized suggestions. These suggestions can help you save on energy costs, reduce environmental impact, and improve the overall energy rating of your home.
+        </p>
+        <p>
+            Whether you're looking to upgrade your insulation, switch to energy-efficient appliances, or simply improve your home's overall energy usage, our app has you covered. Start by entering your data, and let our model do the rest!
+        </p>
+    </div>
 
     <!-- Prediction Form Section -->
     <section class="prediction-form">
@@ -38,6 +45,7 @@
             <button type="submit" class="btn-primary">Predict</button>
         </form>
     </section>
+
 
 </body>
 </html>

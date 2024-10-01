@@ -1,3 +1,202 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F0F5; /* Light background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #28A745; /* Green for headings */
+}
+
+p {
+    color: #555;
+}
+
+/* Navbar styles */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #A5D6A7; /* Soft green hover */
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #28A745; /* Green active link */
+    color: white;
+}
+
+/* General box styling */
+.content-box {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #28A745; /* Green left border for accent */
+}
+
+/* Buttons */
+button {
+    background-color: #28A745; /* Green buttons */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Tips page styling */
+.tips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tip-item {
+    padding: 20px;
+    background-color: #E8F5E9; /* Light green background */
+    border-left: 5px solid #28A745; /* Green left border */
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tip-item h2 {
+    color: #28A745;
+}
+
+.tip-item:hover {
+    background-color: #F1F8E9; /* Softer green hover */
+    border-left-color: #81C784; /* Lighter green border on hover */
+}
+
+/* Help form input styles */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #28A745;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+
+/* General box styling */
+.content-box {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007BFF; /* Blue left border for accent */
+}
+
+
+/* Tips page styling */
+.tips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tip-item {
+    padding: 20px;
+    background-color: #eef6ff;
+    border-left: 5px solid #007BFF;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tip-item h2 {
+    color: #007BFF;
+}
+
+.tip-item:hover {
+    background-color: #f0f8ff;
+    border-left-color: #FFA500;
+}
+
+/* Help form input styles */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
 /* General Reset */
 * {
     margin: 0;
@@ -5,24 +204,6 @@
     box-sizing: border-box;
 }
 
-/* Navbar Styles */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-.topnav a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
 
 .active {
     background-color: #4CAF50;
@@ -112,18 +293,6 @@
     opacity: 1;
 }
 
-/* Button Styles */
-.btn-primary {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-}
 
 .btn-primary:hover {
     background-color: #45a049;
@@ -188,4 +357,43 @@
 .blog-post p {
     font-size: 1rem;
     color: #666;
+}
+
+
+/* General styling for the box */
+.content-box {
+    max-width: 800px; /* Limits the width to 800px */
+    margin: 50px auto; /* Centers the box and adds vertical spacing */
+    padding: 20px; /* Adds space inside the box */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    border: 1px solid #ddd; /* Light border */
+}
+
+.content-box h1 {
+    font-size: 2.5rem; /* Larger font for the title */
+    text-align: center; /* Center the title text */
+    margin-bottom: 20px; /* Add space between title and content */
+}
+
+.content-box p {
+    font-size: 1.2rem; /* Slightly larger font for content */
+    line-height: 1.6; /* Spacing between lines */
+    text-align: justify; /* Justified text for a cleaner look */
+}
+
+/* Styling for tips page */
+.tips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between each tip box */
+}
+
+.tip-item {
+    padding: 20px;
+    background-color: #eef6ff; /* Light blue background for tips */
+    border-left: 5px solid #007BFF; /* Left border for visual emphasis */
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for each tip */
 }
