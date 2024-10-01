@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="..\static\styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Efficiency Predictor</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="">Help</a>
+        <a href="">About Us</a>
+        <a href="">Tips</a>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="hero">
+        <h1>Improve Your Home's Energy Efficiency</h1>
+        <p>Use our tool to predict and enhance your energy efficiency rating.</p>
+    </section>
+
+    <!-- Prediction Form Section -->
+    <section class="prediction-form">
+        <h2>Make a Prediction</h2>
+        <form action="/predict" method="post">
+            {% for feature, range in numeric_columns_ranges.items() %}
+                <div class="input-container">
+                    <label for="{{ feature }}">{{ feature }}</label>
+                    <input type="number" name="{{ feature }}" id="{{ feature }}" min="{{ range[0] }}" max="{{ range[1] }}" required>
+                    <div class="tooltip">
+                        <button type="button">?</button>
+                        <span class="tooltiptext">Enter a value between {{ range[0] }} and {{ range[1] }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn-primary">Predict</button>
+        </form>
+    </section>
+
+</body>
+</html>
